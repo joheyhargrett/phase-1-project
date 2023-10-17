@@ -1,0 +1,37 @@
+{
+    "artists": [
+      {
+        "id": 1,
+        "name": "J. Cole",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6l3HvQ5sa6mXTsMTB19rO5"
+        },
+        "followers": {
+          "href": null,
+          "total": 21714280
+        },
+        "genres": ["conscious hip hop", "hip hop", "north carolina hip hop", "rap"],
+        "href": "https://api.spotify.com/v1/artists/6l3HvQ5sa6mXTsMTB19rO5",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab6761610000e5ebadd503b411a712e277895c8a",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616100005174add503b411a712e277895c8a",
+            "height": 320,
+            "width": 320
+          },
+          {
+            "url": "https://i.scdn.co/image/ab6761610000f178add503b411a712e277895c8a",
+            "height": 160,
+            "width": 160
+          }
+        ],
+        "popularity": 86,
+        "type": "artist",
+        "uri": "spotify:artist:6l3HvQ5sa6mXTsMTB19rO5"
+      }
+    ]
+  }
