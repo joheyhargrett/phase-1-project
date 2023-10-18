@@ -1,5 +1,7 @@
 const content = document.getElementById("content");
 const artistContainer = document.createElement("div"); // Create a container for the artist info
+const artistImage = document.createElement("img"); // Create an img element for the artist's image
+const albumDropdown = document.createElement("select"); // Create a single select element for the album dropdown
 
 let data = {};
 let selectedAlbumId = null; // Track the selected album ID
@@ -19,7 +21,6 @@ const renderPage = async () => {
     await requestToken();
 
     artistIds.forEach((artistId) => fetchArtist(artistId));
-    fetchArtistAlbums("6l3HvQ5sa6mXTsMTB19rO5"); // Fetch artist albums
 };
 
 const fetchArtist = async (artistId) => {
@@ -29,7 +30,20 @@ const fetchArtist = async (artistId) => {
 
     const artistInfo = await response.json();
     const artist = { image: artistInfo.images[1].url };
-    renderArtist(artist);
+    artistImage.src = artist.image;
+    artistImage.addEventListener("click", () => showAlbumDropdown(artistId)); // Add click event to the artist image
+    artistContainer.appendChild(artistImage);
+
+    content.appendChild(artistContainer); // Add the container to the content
+};
+
+const showAlbumDropdown = (artistId) => {
+    clearAlbumDropdown(); // Clear existing options in the album dropdown
+    fetchArtistAlbums(artistId); // Fetch artist albums when the image is clicked
+};
+
+const clearAlbumDropdown = () => {
+    albumDropdown.innerHTML = ''; // Clear existing options in the album dropdown
 };
 
 const fetchArtistAlbums = async (artistId) => {
@@ -50,18 +64,7 @@ const fetchAlbumTracks = async (albumId) => {
     renderTrackList(albumTracks.items); // Display the tracks associated with the album
 };
 
-const renderArtist = (artist) => {
-    const artistImage = document.createElement("img");
-    artistImage.src = artist.image;
-    artistContainer.appendChild(artistImage);
-
-    content.appendChild(artistContainer); // Add the container to the content
-};
-
 const renderAlbumDropdown = (albums) => {
-    const albumDropdown = document.createElement("select"); // Create a select element for the album dropdown
-    albumDropdown.id = "albumDropdown"; // Set an id for the dropdown
-
     const albumOption = document.createElement("option"); // Create an option element for the default message
     albumOption.textContent = "Select an Album";
     albumDropdown.appendChild(albumOption);
@@ -78,7 +81,7 @@ const renderAlbumDropdown = (albums) => {
         fetchAlbumTracks(selectedAlbumId); // Fetch and display tracks when an album is selected
     });
 
-    artistContainer.appendChild(albumDropdown); // Add the album dropdown to the container
+    content.appendChild(albumDropdown); // Add the album dropdown to the content
 };
 
 const renderTrackList = (tracks) => {
