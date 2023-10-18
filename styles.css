@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Background color for the body */
+    font-family: 'Arial', sans-serif; /* Custom font family */
+  }
+  
+  #content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .artist-container {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Background color for artist containers */
+    border-radius: 10px; /* Rounded borders for artist containers */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+    transition: transform 0.2s; /* Transition for hover effect */
+  }
+  
+  .artist-container:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .artist-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Rounded borders for artist photos */
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.2s; /* Transition for hover effect */
+  }
+  
+  .artist-container:hover img {
+    transform: rotate(360deg); /* Rotate on hover */
+  }
+  
+  .artist-container h2 {
+    margin: 0;
+    color: #333; /* Artist name color */
+  }
+  
+  .heart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: red; /* Heart icon color */
+    margin-top: 5px;
+  }
+  
+  /* Animation for the heart icon */
+  @keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .heart-icon:hover {
+    animation: heartBeat 0.5s ease-in-out infinite; /* Apply animation on hover */
+  }
+  
+  /* Search input and button styling */
+  #searchInput {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  #searchButton {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  #searchButton:hover {
+    background-color: #45a049;
+  }
+  
