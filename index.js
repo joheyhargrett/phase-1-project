@@ -4,7 +4,9 @@ let data = {};
 const artistData = [
     { id: "6l3HvQ5sa6mXTsMTB19rO5", name: "J-Cole" },
     { id: "1uNFoZAHBGtllmzznpCI3s", name: "Justin Bieber" },
-    { id: "", name: "Artist 3" }
+    { id: "790FomKkXshlbRYZFtlgla", name: "Karol G" },
+    { id: "12Chz98pHFMPJEknJQMWvI", name:"Muse"},
+    {id: "181bsRPaVXVlUKXrxwZfHK", name:"Megan the Stallion"}
     // Add more artists with their IDs and names
 ];
 
