@@ -1,3 +1,4 @@
+/* Your existing code */
 body {
     display: flex;
     flex-direction: column;
@@ -5,7 +6,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0; /* Background color for the body */
+    background-color: #C0C0C0; /* Background color for the body */
     font-family: 'Arial', sans-serif; /* Custom font family */
   }
   
@@ -47,7 +48,12 @@ body {
   
   .artist-container h2 {
     margin: 0;
-    color: #333; /* Artist name color */
+    color: black; /* Artist name color (black) */
+  }
+
+  /* Style for song titles (white) */
+  .song-title {
+    color: white;
   }
   
   .heart-icon {
@@ -95,4 +101,22 @@ body {
   #searchButton:hover {
     background-color: #45a049;
   }
-  
+
+
+/* Neon Header */
+.neon-header {
+    font-size: 3em;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    animation: neonGlow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+    }
+    to {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+}
+
