@@ -1,122 +1,155 @@
 /* Your existing code */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #C0C0C0; /* Background color for the body */
-    font-family: 'Arial', sans-serif; /* Custom font family */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-bottom: 30px;
   
-  #content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-  }
+  font-family: 'Arial', sans-serif; /* Custom font family */
+  background-image: url(images/pexels-dmitry-demidov-3784221.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  .artist-container {
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-    background-color: #f9f9f9; /* Background color for artist containers */
-    border-radius: 10px; /* Rounded borders for artist containers */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
-    transition: transform 0.2s; /* Transition for hover effect */
-  }
-  
-  .artist-container:hover {
-    transform: scale(1.05); /* Scale up on hover */
-  }
-  
-  .artist-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; /* Rounded borders for artist photos */
-    object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.2s; /* Transition for hover effect */
-  }
-  
-  .artist-container:hover img {
-    transform: rotate(360deg); /* Rotate on hover */
-  }
-  
-  .artist-container h2 {
-    margin: 0;
-    color: black; /* Artist name color (black) */
-  }
 
-  /* Style for song titles (white) */
-  .song-title {
-    color: white;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+} 
+
+ul {
+  list-style-type: none;
+}
+
+.artist-container {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Background color for artist containers */
+  border-radius: 10px; /* Rounded borders for artist containers */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+  transition: transform 0.2s; 
+  /* Transition for hover effect */
+}
+
+.artist-container:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+
+
+
+.artist-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Rounded borders for artist photos */
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.2s; /* Transition for hover effect */
+}
+
+.artist-container:hover img {
+  transform: rotate(360deg); /* Rotate on hover */
+}
+
+.artist-container h2 {
+  margin: 0;
+  color: black;
+   /* Artist name color (black) */
+}
+
+/* Style for song titles (white) */
+.song-title {
+  color: white;
+}
+
+.heart-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: red; /* Heart icon color */
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+/* Animation for the heart icon */
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
   }
-  
-  .heart-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: red; /* Heart icon color */
-    margin-top: 5px;
+  50% {
+    transform: scale(1.1);
   }
-  
-  /* Animation for the heart icon */
-  @keyframes heartBeat {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
   }
-  
-  .heart-icon:hover {
-    animation: heartBeat 0.5s ease-in-out infinite; /* Apply animation on hover */
-  }
-  
-  /* Search input and button styling */
-  #searchInput {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-  }
-  
-  #searchButton {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  #searchButton:hover {
-    background-color: #45a049;
-  }
+}
+
+.heart-icon:hover {
+  animation: heartBeat 0.5s ease-in-out infinite; /* Apply animation on hover */
+}
+
+/* Search input and button styling */
+#searchInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+
+#searchButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color:#060806;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+#searchButton:hover {
+  background-color: #00ff00;
+}
 
 
 /* Neon Header */
 .neon-header {
-    font-size: 3em;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
-    animation: neonGlow 1s ease-in-out infinite alternate;
+  font-size: 4em;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  animation: neonGlow 1s ease-in-out infinite alternate;
+  width: 100vw;
+  text-align: center;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  
+}
+
+.subheading {
+  color: white;
+  font-size: larger;
 }
 
 @keyframes neonGlow {
-    from {
-        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
-    }
-    to {
-        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
-    }
+  from {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  }
+  to {
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
 }
+
+
 
