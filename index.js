@@ -78,7 +78,7 @@ const fetchArtistGenre = async (artistId, artistContainer) => {
   }
 };
 
-// Modify your fetchArtist function to call fetchArtistGenre
+// Modified fetchArtist function to call fetchArtistGenre
 const fetchArtist = async (artist) => {
   const response = await fetch(`https://api.spotify.com/v1/artists/${artist.id}`, {
       headers: { "Authorization": `Bearer ${data.access_token}` }
@@ -124,7 +124,6 @@ const fetchArtist = async (artist) => {
   await fetchArtistGenre(artist.id, artistContainer);
 };
 
-// The rest of your code remains the same
 
 // Function to display the album tracks
 const showAlbumDropdown = async (artistId) => {
@@ -254,4 +253,3 @@ function updateHeartedArtists(artistId, hearted) {
 
 // Initialize the page
 renderPage();
-
